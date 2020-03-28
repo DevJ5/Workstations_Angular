@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-servers',
-  templateUrl: './servers.component.html',
-  styleUrls: ['./servers.component.css']
+  selector: 'app-containers',
+  templateUrl: './containers.component.html',
+  styleUrls: ['./containers.component.css']
 })
-export class ServersComponent implements OnInit {
+
+export class ContainersComponent implements OnInit {
   allowNewServer: boolean = false;
   serverName: string = "my-server";
   serverCreated: boolean = false;
