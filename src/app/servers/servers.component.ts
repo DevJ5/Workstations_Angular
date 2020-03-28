@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-  allowNewServer: Boolean = false;
-  foo = "bar";
+  allowNewServer: boolean = false;
+  serverName: string = "my-server";
+  serverCreated: boolean = false;
+  servers = ['Dev', 'Test', 'Prod'];
 
   constructor() {
     setTimeout(() => {
@@ -19,7 +21,8 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer(event: MouseEvent) {
-    console.log((<HTMLInputElement>event.target).value);
-    this.foo = "barbar";
+    console.log((<HTMLInputElement>event.target));
+    this.serverCreated = true;
+    this.servers.push(this.serverName);
   }
 }
